@@ -31,7 +31,12 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className={`${scrolled ? 'my-2' : 'mb-6'} xl:mx-0 mx-auto`}>
-            <img src="/logo.png" alt="Logo" className="h-15 sm:h-17 md:h-17 lg:h-17 "/>
+            {/* <img src="/logo.png" alt="Logo" className="h-15 sm:h-17 md:h-17 lg:h-17 "/> */}
+            <img 
+              src={`${process.env.NODE_ENV === 'production' ? '/CAFE-BURANSH' : '/CAFE-BURANSH'}/logo.png`} 
+              alt="Logo" 
+              className="h-15 sm:h-17 md:h-17 lg:h-17"
+            />
           </div>
 
           {/* Hamburger Button */}
